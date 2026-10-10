@@ -60,7 +60,7 @@ export default function AProposPage() {
           </p>
         </AnimatedSection>
         <AnimatedSection delay={0.1} className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={img.teamOffice1} alt="Équipe IVOLT à Abidjan" fill unoptimized className="object-cover" />
+          <Image src={img.teamOffice1} alt="Équipe IVOLT à Abidjan" fill unoptimized priority className="object-cover" />
         </AnimatedSection>
       </section>
 

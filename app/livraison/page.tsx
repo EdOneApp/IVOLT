@@ -51,7 +51,7 @@ export default function LivraisonPage() {
           </StaggerGroup>
         </AnimatedSection>
         <AnimatedSection delay={0.1} className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={img.deliveryRider2} alt="Coursier IVOLT à moto électrique" fill unoptimized className="object-cover" />
+          <Image src={img.deliveryRider2} alt="Coursier IVOLT à moto électrique" fill unoptimized priority className="object-cover" />
         </AnimatedSection>
       </section>
 

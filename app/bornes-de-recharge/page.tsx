@@ -27,7 +27,7 @@ export default function BornesPage() {
 
       <section className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-24 grid lg:grid-cols-2 gap-14 items-center">
         <AnimatedSection className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={img.chargePlug2} alt="Installation de borne de recharge IVOLT" fill unoptimized className="object-cover" />
+          <Image src={img.chargePlug2} alt="Installation de borne de recharge IVOLT" fill unoptimized priority className="object-cover" />
         </AnimatedSection>
         <AnimatedSection>
           <Eyebrow>Pourquoi installer une borne</Eyebrow>

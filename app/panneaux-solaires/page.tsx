@@ -27,7 +27,7 @@ export default function SolairePage() {
 
       <section className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-24 grid lg:grid-cols-2 gap-14 items-center">
         <AnimatedSection className="relative aspect-[4/3] rounded-md overflow-hidden order-2 lg:order-1">
-          <Image src={img.solarWorker1} alt="Installation de panneaux solaires IVOLT" fill unoptimized className="object-cover" />
+          <Image src={img.solarWorker1} alt="Installation de panneaux solaires IVOLT" fill unoptimized priority className="object-cover" />
         </AnimatedSection>
         <AnimatedSection className="order-1 lg:order-2">
           <Eyebrow>Pourquoi passer au solaire</Eyebrow>

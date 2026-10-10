@@ -29,7 +29,7 @@ export default function SwappingPage() {
 
       <section className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-24 grid lg:grid-cols-2 gap-14 items-center">
         <AnimatedSection className="relative aspect-[4/3] rounded-md overflow-hidden order-2 lg:order-1">
-          <Image src={img.chargePlug1} alt="Point de swap batterie IVOLT" fill unoptimized className="object-cover" />
+          <Image src={img.chargePlug1} alt="Point de swap batterie IVOLT" fill unoptimized priority className="object-cover" />
         </AnimatedSection>
         <AnimatedSection className="order-1 lg:order-2">
           <Eyebrow tone="jade">Comment ça marche</Eyebrow>

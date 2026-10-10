@@ -61,7 +61,7 @@ export default async function MotoDetailPage({
                 </div>
               </div>
               <div className="relative aspect-[4/3] rounded-md overflow-hidden">
-                <Image src={moto.image} alt={`${moto.brand} ${moto.model}`} fill unoptimized className="object-cover" />
+                <Image src={moto.image} alt={`${moto.brand} ${moto.model}`} fill unoptimized priority className="object-cover" />
               </div>
             </div>
           </AnimatedSection>

@@ -64,7 +64,7 @@ export default async function VehicleDetailPage({
                 </div>
               </div>
               <div className="relative aspect-[4/3] rounded-md overflow-hidden">
-                <Image src={vehicle.image} alt={`${vehicle.brand} ${vehicle.model}`} fill unoptimized className="object-cover" />
+                <Image src={vehicle.image} alt={`${vehicle.brand} ${vehicle.model}`} fill unoptimized priority className="object-cover" />
               </div>
             </div>
           </AnimatedSection>
