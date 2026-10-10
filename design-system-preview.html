@@ -1,0 +1,205 @@
+<title>IVOLT Design System</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  :root{
+    --pierre:#EFEDE7;
+    --pierre-2:#E3E0D7;
+    --nuit:#12161C;
+    --nuit-2:#1A2028;
+    --encre:#1C2127;
+    --or:#D99A3A;
+    --or-soft:#F0D4A0;
+    --jade:#1E8F6F;
+    --jade-soft:#BFE3D6;
+    --indigo:#4B4FDB;
+    --indigo-soft:#C7C8F5;
+    --ink-on-light:#1C2127;
+    --ink-muted-light:#5B5A53;
+    --ink-on-dark:#F3F1EA;
+    --ink-muted-dark:#9CA3AE;
+    --bg:var(--pierre);
+    --surface:#FFFFFF;
+    --text:var(--ink-on-light);
+    --text-muted:var(--ink-muted-light);
+    --rule:#D8D4C8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:var(--nuit);
+      --surface:var(--nuit-2);
+      --text:var(--ink-on-dark);
+      --text-muted:var(--ink-muted-dark);
+      --rule:#2A313B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:var(--nuit);
+    --surface:var(--nuit-2);
+    --text:var(--ink-on-dark);
+    --text-muted:var(--ink-muted-dark);
+    --rule:#2A313B;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Manrope',system-ui,sans-serif;
+    line-height:1.5;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:5rem 2rem 7rem;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--or);
+    margin:0 0 1rem;
+  }
+  h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;
+    font-size:clamp(2.6rem,6vw,4.6rem);
+    line-height:0.98;
+    letter-spacing:-0.02em;
+    text-wrap:balance;
+    margin:0 0 1.2rem;
+  }
+  .lede{
+    max-width:640px;
+    font-size:1.15rem;
+    color:var(--text-muted);
+    margin:0 0 4.5rem;
+  }
+  section{margin-bottom:5rem;}
+  h2{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700;
+    font-size:1.5rem;
+    letter-spacing:-0.01em;
+    margin:0 0 .4rem;
+  }
+  .section-note{color:var(--text-muted);font-size:.95rem;margin:0 0 2rem;max-width:620px;}
+
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+  .swatch{border-radius:4px;overflow:hidden;border:1px solid var(--rule);}
+  .swatch .chip{height:110px;}
+  .swatch .meta{padding:.9rem 1rem;background:var(--surface);}
+  .swatch .name{font-weight:700;font-size:.92rem;}
+  .swatch .hex{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--text-muted);margin-top:.15rem;}
+  .swatch .use{font-size:.78rem;color:var(--text-muted);margin-top:.4rem;}
+
+  .type-row{
+    display:flex;align-items:baseline;gap:1.5rem;
+    padding:1.6rem 0;border-top:1px solid var(--rule);
+    flex-wrap:wrap;
+  }
+  .type-row:last-child{border-bottom:1px solid var(--rule);}
+  .type-label{
+    width:140px;flex-shrink:0;
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);
+  }
+  .specimen-display{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:2.1rem;letter-spacing:-0.01em;}
+  .specimen-body{font-family:'Manrope',sans-serif;font-size:1.05rem;max-width:480px;color:var(--text);}
+  .specimen-mono{font-family:'IBM Plex Mono',monospace;font-size:1.05rem;color:var(--or);}
+
+  .mock{
+    position:relative;border-radius:6px;overflow:hidden;
+    background:linear-gradient(170deg,var(--nuit) 0%,var(--encre) 100%);
+    color:var(--ink-on-dark);
+    padding:3.5rem 3rem;
+    min-height:380px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    border:1px solid var(--rule);
+  }
+  .mock::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 10%, rgba(217,154,58,.25), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 10% 90%, rgba(30,143,111,.22), transparent 60%);
+    pointer-events:none;
+  }
+  .mock-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or-soft);position:relative;margin-bottom:.8rem;}
+  .mock h3{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.02;letter-spacing:-0.02em;
+    margin:0 0 1rem;max-width:560px;position:relative;text-wrap:balance;
+  }
+  .mock p{position:relative;max-width:440px;color:var(--ink-muted-dark);margin:0 0 1.8rem;}
+  .mock .cta-row{position:relative;display:flex;gap:.9rem;flex-wrap:wrap;}
+  .btn{
+    font-family:'Manrope',sans-serif;font-weight:700;font-size:.92rem;
+    padding:.8rem 1.5rem;border-radius:3px;border:none;cursor:pointer;
+  }
+  .btn-primary{background:var(--or);color:#1C1200;}
+  .btn-ghost{background:transparent;color:var(--ink-on-dark);border:1px solid rgba(243,241,234,.35);}
+
+  .tags{position:relative;display:flex;gap:.6rem;margin-bottom:1.6rem;flex-wrap:wrap;}
+  .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;
+    padding:.35rem .7rem;border-radius:3px;
+  }
+  .tag.jade{background:rgba(30,143,111,.18);color:var(--jade-soft);border:1px solid rgba(30,143,111,.4);}
+  .tag.indigo{background:rgba(75,79,219,.18);color:var(--indigo-soft);border:1px solid rgba(75,79,219,.4);}
+
+  footer{color:var(--text-muted);font-size:.85rem;border-top:1px solid var(--rule);padding-top:1.5rem;}
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">IVOLT — Système de design · v1</p>
+  <h1>L'avenir de la mobilité<br>en Afrique est déjà là.</h1>
+  <p class="lede">Palette, typographie et direction visuelle pour le site vitrine IVOLT — mobilité électrique et énergie, Côte d'Ivoire. Calibré contre Roam Electric, Ampersand Energy et Rivian, en évitant leurs codes directs.</p>
+
+  <section>
+    <h2>Couleurs</h2>
+    <p class="section-note">Trois accents mappés aux métiers de l'entreprise plutôt qu'arbitraires : l'or pour le solaire/l'énergie, le jade pour la charge/le swapping, l'indigo pour la mobilité (VTC/livraison). Fond sombre "Nuit" pour les moments premium/hero, fond clair "Pierre" pour le contenu dense (catalogues, tarifs, légal).</p>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#12161C"></div><div class="meta"><div class="name">Nuit Ivoirienne</div><div class="hex">#12161C</div><div class="use">Fond sombre premium — hero, sections événement</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#EFEDE7"></div><div class="meta"><div class="name">Pierre</div><div class="hex">#EFEDE7</div><div class="use">Fond clair — catalogues, tarifs, pages légales</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#D99A3A"></div><div class="meta"><div class="name">Or Solaire</div><div class="hex">#D99A3A</div><div class="use">CTA principal, solaire, bornes, accents chauds</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#1E8F6F"></div><div class="meta"><div class="name">Jade Circuit</div><div class="hex">#1E8F6F</div><div class="use">Charge, swapping, statuts positifs</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#4B4FDB"></div><div class="meta"><div class="name">Indigo Mobile</div><div class="hex">#4B4FDB</div><div class="use">VTC, livraison, éléments applicatifs</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#1C2127"></div><div class="meta"><div class="name">Encre</div><div class="hex">#1C2127</div><div class="use">Texte sur fond clair, UI dense</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Typographie</h2>
+    <p class="section-note">Bricolage Grotesque en display — grotesque contemporain, anguleux, évite le réflexe Inter/Space Grotesk partout. Manrope en texte courant, excellent support des accents français. IBM Plex Mono pour les chiffres : tarifs, specs, autonomie.</p>
+    <div class="type-row">
+      <div class="type-label">Display / H1</div>
+      <div class="specimen-display">Rechargez votre liberté.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Corps de texte</div>
+      <div class="specimen-body">Vente et location de véhicules et motos électriques, VTC, livraison, stations de charge et swapping partout en Côte d'Ivoire — avec des paiements échelonnés pensés pour vous.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">Données / Mono</div>
+      <div class="specimen-mono">180 km autonomie · 45 min charge · 72V 35Ah</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Application</h2>
+    <p class="section-note">Exemple de composition hero sombre avec les trois accents en usage — pas un dégradé décoratif, mais des lueurs ancrées aux coins qui évoquent la charge électrique.</p>
+    <div class="mock">
+      <div class="tags">
+        <span class="tag jade">Battery Swapping</span>
+        <span class="tag indigo">VTC Électrique</span>
+      </div>
+      <p class="mock-eyebrow">IVOLT — Abidjan &amp; au-delà</p>
+      <h3>Une batterie à plat ne vous arrête plus.</h3>
+      <p>127 points de swap et de charge dans 5 villes. Échangez votre batterie en moins de 3 minutes, sans rendez-vous.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary">Trouver une station</button>
+        <button class="btn btn-ghost">Voir le réseau</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>IVOLT Design System v1 — Next.js + Tailwind + Framer Motion, accents WebGL localisés (hero, véhicules, stations).</footer>
+</div>
