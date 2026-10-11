@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/animated-section";
+import { AmbientSparks } from "@/components/ambient-sparks";
 
 export function CTABanner({
   eyebrow,
@@ -21,6 +22,7 @@ export function CTABanner({
   return (
     <section className="bg-nuit relative overflow-hidden">
       <div className="absolute inset-0 glow-corner pointer-events-none" />
+      <AmbientSparks count={14} seed={9} />
       <div className="max-w-5xl mx-auto px-5 md:px-8 py-20 md:py-28 text-center relative">
         <AnimatedSection>
           <p className="font-mono-data text-xs uppercase tracking-[0.14em] text-or mb-4">

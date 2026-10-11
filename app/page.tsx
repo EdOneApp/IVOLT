@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Zap, Car, Sun, BatteryCharging, Plug, Bike as MotoIcon, Truck } from "lucide-react";
 import { ParticleField } from "@/components/webgl/particle-field";
+import { HeroVideo } from "@/components/hero-video";
+import { AmbientSparks } from "@/components/ambient-sparks";
 import { AnimatedSection, StaggerGroup, StaggerItem } from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -41,7 +43,10 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative bg-nuit overflow-hidden min-h-[88vh] flex items-end">
+        <HeroVideo />
+        <div className="absolute inset-0 bg-nuit/55 pointer-events-none" />
         <ParticleField className="absolute inset-0 w-full h-full" />
+        <AmbientSparks count={24} seed={3} />
         <div className="absolute inset-0 bg-gradient-to-t from-nuit via-nuit/40 to-nuit/10 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 md:px-8 pb-16 md:pb-24 pt-32 relative w-full">
           <AnimatedSection>
@@ -155,6 +160,7 @@ export default function Home() {
       {/* Swapping / charging story */}
       <section className="bg-nuit relative overflow-hidden">
         <div className="absolute inset-0 glow-corner pointer-events-none" />
+        <AmbientSparks count={14} seed={11} />
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28 relative grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
             <Eyebrow tone="jade">Battery swapping &amp; stations</Eyebrow>
